@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple jQuery Mobile Web Page</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>Welcome to jQuery Mobile</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <p>This is a simple web page built using jQuery Mobile.</p>
+    <a href="#about" class="ui-btn ui-btn-b">About</a>
+  </div>
+
+  <div data-role="footer">
+    <h4>&copy; 2024 Your Website</h4>
+  </div>
+</div>
+
+<!-- About Page -->
+<div data-role="page" id="about">
+  <div data-role="header">
+    <h1>About Us</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <p>We are a team passionate about web development.</p>
+    <a href="#home" class="ui-btn ui-btn-b">Back to Home</a>
+  </div>
+
+  <div data-role="footer">
+    <h4>&copy; 2024 Your Website</h4>
+  </div>
+</div>
+
+</body>
+</html>

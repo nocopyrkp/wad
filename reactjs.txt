@@ -1,0 +1,60 @@
+install and hello world
+
+npm init react-app reactjs
+
+npm start
+
+hooks 
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  const decrementCount = () => {
+    setCount(prevCount => prevCount - 1);
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>Counter</h2>
+      <div style={styles.counter}>
+        <button style={styles.button} onClick={decrementCount}>-</button>
+        <span style={styles.count}>{count}</span>
+        <button style={styles.button} onClick={incrementCount}>+</button>
+      </div>
+    </div>
+  );
+}
+
+export default Counter;
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    marginTop: '50px',
+  },
+  counter: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    fontSize: '1.2em',
+    padding: '10px 20px',
+    margin: '0 10px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+  count: {
+    fontSize: '2em',
+    margin: '0 20px',
+  },
+};

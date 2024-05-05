@@ -1,0 +1,28 @@
+{
+// server.js
+const http = require('http');
+
+// Create a server object
+const server = http.createServer((req, res) => {
+  // Set the response HTTP header with status code and Content type
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  // Send the response body "Hello World"
+  res.end('Hello World\n');
+});
+
+// Listen on port 3000
+const PORT = 3000;
+server.listen(PORT, () => {
+  console.log(Server running at http://localhost:${PORT}/);
+});
+}
+
+
+Note : Save the above code in a file named server.js. Then, open your terminal or
+ command prompt, navigate to the directory where server.js is saved, and run the following command to start the server:
+
+node server.js # this command
+
+Now, your Node.js HTTP server is running and listening for incoming requests on port 3000.
+ You can test it by opening a web browser and navigating to http://localhost:3000/, where you should see "Hello World" displayed.
