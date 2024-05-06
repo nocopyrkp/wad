@@ -1,5 +1,5 @@
 {
-// server.js
+// server.js npm init
 const http = require('http');
 const fs = require("fs");
 
