@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JQuery Tutorial</title>
-  </head>
-  <body>
-    <div id="Divone"><b>Remove me by Clicking Button4</b></div>
-    <p id="test1">This is the Para1</p>
-    <p id="test2">This is the <b>Para2</b></p>
-    <p><input type="text" value="Kush" name="" id="test3" /></p>
-    <button id="bt1">Show Text</button>
-    <button id="bt2">Show HTML</button>
-    <button id="bt3">Show value</button>
-    <button id="bt4">Button4</button>
-  </body>
-  <script src="./jquery-3.7.1.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#bt1").click(function () {
-        alert($("#test1").text());
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updating DOM using jQuery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+  
+    #content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      color: #333;
+    }
+  
+    p {
+      color: #666;
+    }
+  
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
 
-        $("#test1").text("I am added by Dom Manipulation");
-        $("#test1").before("I am added by Dom Manipulation Using Before");
-      });
+<div id="content">
+  <h2>Original Content</h2>
+  <p>This is the original content.</p>
+</div>
 
-      $("#bt2").click(function () {
-        alert($("#test2").html());
+<button id="updateButton">Update Content</button>
 
-        $("#test2").text("<h1>I am adding a HTML using jQuery & DOM </h1>");
-        $("#test2").after(
-          "<h1>I am adding a HTML After using jQuery & DOM </h1>"
-        );
-      });
+<script>
+$(document).ready(function(){
+  $("#updateButton").click(function(){
+    $("#content").html("<h2>Updated Content</h2><p>This is the updated content!</p>");
+  });
+});
+</script>
 
-      $("#bt3").click(function () {
-        alert($("#test3").val());
-        $("#test3").val("Added value using DOM");
-      });
-
-      $("#bt4").click(function () {
-        $("#Divone").remove();
-      });
-    });
-  </script>
+</body>
 </html>
